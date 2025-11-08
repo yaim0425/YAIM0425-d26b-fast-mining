@@ -22,8 +22,8 @@ function This_MOD.start()
     --- Valores de la referencia
     This_MOD.reference_values()
 
-    -- --- Obtener los elementos
-    -- This_MOD.get_elements()
+    --- Obtener los elementos
+    This_MOD.get_elements()
 
     -- --- Modificar los elementos
     -- for _, spaces in pairs(This_MOD.to_be_processed) do
@@ -95,13 +95,15 @@ function This_MOD.get_elements()
     --- Función para analizar cada entidad
     --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
 
-    local function valide_recipe(recipe)
+    local function valide_entity(entity)
         --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
         --- Validación
         --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
 
-        recipe.energy_required = recipe.energy_required or 0.5
-        if recipe.energy_required <= This_MOD.new_value then return end
+        if not entity.minable then return end
+        if not entity.minable.results then return end
+        entity.minable.mining_time = entity.minable.mining_time or 1
+        if entity.minable.mining_time <= This_MOD.new_value then return end
 
         --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
 
@@ -114,7 +116,7 @@ function This_MOD.get_elements()
         --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
 
         local Space = {}
-        Space.recipe = recipe
+        Space.entity = entity
 
         --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
 
@@ -126,8 +128,8 @@ function This_MOD.get_elements()
         --- Guardar la información
         --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
 
-        This_MOD.to_be_processed[recipe.type] = This_MOD.to_be_processed[recipe.type] or {}
-        This_MOD.to_be_processed[recipe.type][recipe.name] = Space
+        This_MOD.to_be_processed[entity.type] = This_MOD.to_be_processed[entity.type] or {}
+        This_MOD.to_be_processed[entity.type][entity.name] = Space
 
         --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
     end
@@ -142,8 +144,8 @@ function This_MOD.get_elements()
     --- Preparar los datos a usar
     --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
 
-    for _, recipe in pairs(data.raw.recipe) do
-        valide_recipe(recipe)
+    for _, entity in pairs(GMOD.entities) do
+        valide_entity(entity)
     end
 
     --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
