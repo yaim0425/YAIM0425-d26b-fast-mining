@@ -1,8 +1,8 @@
-# YAIM0425 d26b – Fast Mining ⛏️
+# YAIM904 d26b – Fast Mining ⛏️
 
 ## 📦 Description
 
-**YAIM0425 d26b – Fast Mining** reduces the mining time of **all mineable resources** to the **minimum value allowed by Factorio**.
+**YAIM904 d26b – Fast Mining** reduces the mining time of **all mineable resources** to the **minimum value allowed by Factorio**.
 
 This MOD removes waiting time when mining resources, allowing players to gather materials almost instantly. It is especially useful for testing, sandbox play, or fast-paced factory building.
 
@@ -43,11 +43,11 @@ Once enabled, the effect is global and immediate.
 ## 🔗 Repository
 
 **MOD**
-[YAIM0425 d26b Fast mining](https://github.com/yaim0425/YAIM0425-d26b-fast-mining)
+[YAIM904 d26b Fast mining](https://github.com/yaim0425/YAIM904-d26b-fast-mining)
 
 **Required**
 
-[YAIM0425 d00b Core](https://github.com/yaim0425/YAIM0425-d00b-core)
+[YAIM904 d00b Core](https://github.com/yaim0425/YAIM904-d00b-core)
 
 ---
 
@@ -59,10 +59,10 @@ Suggestions, ideas, and balance feedback are welcome on the GitHub repository.
 
 ## 🖼️ Screenshots
 
-![Screenshot 1](https://github.com/yaim0425/YAIM0425-d26b-fast-mining/raw/code/screenshot/(1).png)
+![Screenshot 1](https://github.com/yaim0425/YAIM904-d26b-fast-mining/raw/code/screenshot/(1).png)
 
-![Screenshot 2](https://github.com/yaim0425/YAIM0425-d26b-fast-mining/raw/code/screenshot/(2).png)
+![Screenshot 2](https://github.com/yaim0425/YAIM904-d26b-fast-mining/raw/code/screenshot/(2).png)
 
-![Screenshot 3](https://github.com/yaim0425/YAIM0425-d26b-fast-mining/raw/code/screenshot/(3).png)
+![Screenshot 3](https://github.com/yaim0425/YAIM904-d26b-fast-mining/raw/code/screenshot/(3).png)
 
-![Screenshot 4](https://github.com/yaim0425/YAIM0425-d26b-fast-mining/raw/code/screenshot/(4).png)
+![Screenshot 4](https://github.com/yaim0425/YAIM904-d26b-fast-mining/raw/code/screenshot/(4).png)
